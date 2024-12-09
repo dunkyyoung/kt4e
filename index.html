@@ -1,0 +1,104 @@
+HTML:
+<header>
+  <div class="logo">
+    <a href="#">
+      <img src="logo.png" alt="Логотип">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Обо мне</a></li>
+      <li><a href="#">Проекты</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="projects-slider">
+    <div class="slider-container">
+      <div class="slide">
+        <img src="project1.jpg" alt="Проект 1">
+        <h3>Проект 1</h3>
+        <p>Описание проекта 1</p>
+      </div>
+      <div class="slide">
+        <img src="project2.jpg" alt="Проект 2">
+        <h3>Проект 2</h3>
+        <p>Описание проекта 2</p>
+      </div>
+      <div class="slide">
+        <img src="project3.jpg" alt="Проект 3">
+        <h3>Проект 3</h3>
+        <p>Описание проекта 3</p>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="prev-btn">Предыдущий</button>
+      <button class="next-btn">Следующий</button>
+    </div>
+  </section>
+</main>
+
+<style>.logo img {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Стили для слайдера */
+  #projects-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 33.33%;
+    padding: 20px;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .slider-controls button {
+    margin: 0 10px;
+  }
+  
+  /* Стили для анимированного меню */
+  nav ul li a {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }</style>
+  <script>const sliderContainer = document.querySelector('.slider-container');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentSlide = 0;
+    const totalSlides = sliderContainer</script>
